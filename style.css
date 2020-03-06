@@ -1,0 +1,134 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+    padding: 2rem;
+    margin: 0;
+    /* font-size: 20px; */
+    position: relative;
+}
+
+h1, h3 {
+    text-align: center;
+    color: #d50;
+}
+
+a {
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.basic-img {
+    width: 20%;
+    height: auto;
+    border: 1px solid #000;
+    border-radius: 50%;
+    position: static;
+    top: 0; left: 0;
+    float: left;
+    margin-right: 1rem;
+    padding: 0.5rem;
+}
+
+.basic-img:hover {
+    border: 1px solid #d50;
+    cursor: pointer;
+}
+
+.gallery {
+    clear: both;
+    padding-top: 1rem;
+    display: grid;
+    grid-column-gap: 2rem;
+    grid-row-gap: 1rem;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.item {
+    background: #d50;
+    overflow: hidden;
+    border: 1px solid #000;
+    border-radius: 1rem;
+    padding: 0.5rem;
+}
+
+.item:first-child:before {
+    display: block;
+    content: 'A site-project demo - HTML, CSS and a bit of JavaScript used here (responsive design, grid-layout)';
+    padding: 1rem;
+    text-align: center;
+}
+
+.item:nth-child(2):before{
+    display: block;
+    content: 'A single web page demo project with Flexbox-layout - HTML, CSS and a bit of JavaScript used';
+    padding: 1rem;
+    text-align: center;
+}
+
+.item:nth-child(3):before {
+    display: block;
+    content: 'A single web page demo created with psd image slicing (responsive, mobile menu when width < 600px)';
+    padding: 1rem;
+    text-align: center;
+}
+
+.item:nth-child(4):before {
+    display: block;
+    content: 'Another single web page demo of mine - PSD to HTML (responsive)';
+    padding: 1rem;
+    text-align: center;
+}
+
+.item:hover img {
+    opacity: 1;
+	border: 2px solid #fff;
+}
+
+.item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 2px solid #000;
+    opacity: 0.8;
+}
+
+footer {
+	padding-top: 2rem;
+	padding-bottom: 1rem;
+}
+
+@media (max-width: 1000px) {
+	
+	body {
+		padding: 1rem;
+	}
+	
+    .gallery {
+        grid-gap: 1rem;
+        grid-template-columns: 1fr 1fr;
+        /* grid-template-rows: repeat (6, 1fr); */
+    }
+}
+
+@media (max-width: 700px) {
+
+.basic-img {
+    width: 30%;
+    height: auto;
+    margin-right: 0.5rem;
+    padding: 0.2rem;
+}
+
+}
+
+@media (max-width: 600px) {
+    .gallery {
+        grid-gap: 1rem;
+        grid-template-columns: 1fr;
+        /* grid-template-rows: repeat (6, 1fr); */
+    }
+}
